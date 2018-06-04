@@ -23,24 +23,28 @@ build-wsjtx-git docs
 ---
 
 ## Build Options
-Only four options are available in this script:
-|Item       | Action             | Description
-|:---------:|--------------------|---------------|
-| qt55      | enable or disable  | Use QT 5.5    |
-| clean     | enable or disable  | Clean Build tree before compile |
-| rcfg      | enable or disable  | Reconfigure source tree before compile |
-| autorun   | enable or disable  | Run WSJT-X after compiling |
+Only four options are available in this script
+
+| Item       | Action             | Description   |
+| :---------:|--------------------|---------------|
+| qt55       | enable or disable  | Use QT 5.5    |
+| clean      | enable or disable  | Clean Build tree before compile |
+| rcfg       | enable or disable  | Reconfigure source tree before compile |
+| autorun    | enable or disable  | Run WSJT-X after compiling |
 
 The actions are the same as within the standard SVN build script. 
 
 ---
 
-## New Files
-Two New files have been added to `JTSDK v2.0.6`
-* C:\JTSDK\config\wsjtx-git.txt
-* C:\JTSDK\scripts\qtent-build-wsjtx-git.cmd
+## Default Profiles
+This locations for tellign the script where the Source and Destination
+directories are and should is contained in a default.txt file, located
+at `C:\JTSDK\config\defailt.txt
 
-The `wsjtx-git.txt` contains just two lines of interest, SRCD and DEST. Only the paths should change, do not change the prefix.
+The `default.txt` file contains just two lines of interest, SRCD and DEST. Only
+the paths should change, do not change the prefix.
+
+For this example, the file contains the following:
 ```
 # For use with qtenv-build-wsjtx-git.cmd only
 # - Only the paths need to be changed
@@ -53,21 +57,25 @@ SRCD C:\JTSDK\tmp\wsjtx-git-sf
 # Edit the next line to set Destination Directory
 DEST C:\JTSDK\tmp\wsjtx-output
 ```
+
+* SRCD represents the location and name of the of the repsoitory checkout
+* DEST is the root locaiton where the artifact will be located.
+
+If you wish to use a different branch checkout, update the SRD path. If
+you would like a different Destination directory, update the DEST path.
+
 ---
 ## Building WSJT-X From a Git Repo
-It should not matter which repository is checked out, be it from `Bibucket`
-or `Sourceforge`. In this example, we'll use the `Sourceforge` public
-repository.
+It should not matter which repository service is used. For this example, we'll being using `Sourceforge` and the [WSJT-X Repository](https://sourceforge.net/p/wsjt/wsjtx/ci/stable/tree/)
 
 As noted earlier, `JTSDK-QT` does not know of, nor is it concerned with
-Git. All repository management will mostly likely be performed outside of
-the `JTSDK-QT Environment` using an appropriate Git Client.
+Git. All repository management should be performed outside of the 
+`JTSDK-QT Environment` using an appropriate Git Client.
 
 ### Checkout WSJT-X Repository
 You can use any Git Client you like. The only thing that is of concern to the
 build-script is the full path including the ckeckout name, and the destination
-directory. The following example uses the following:
-
+directory. For this build example, we'll be using the following:
 ```
 Checkout Type ..........: Anonymous
 Git Repo URL ...........: https://git.code.sf.net/p/wsjt/wsjtx 
@@ -81,7 +89,7 @@ Open Windows Command Prompt, or Git-Bash terminal and checkout WSJT-X with the
 following command:
 
 >Note - You can change the final folder name if you wish. However, make sure to
-update the `wsjtx-git.txt` if you do.
+update the `default.txt` file if you do.
 
 ```
 # Checkout WSJT-X
@@ -97,11 +105,11 @@ Both commands should yeild the same resutls, a new checkout in: C:\JTSDK\tmp\wsj
 ```
 #### **Step-2 Update wsjtx-git.txt File**
 At this point, ensure you have updated both the SRCD and DEST path locations
-in `C:\JTSDK\config\wsjtx-git.txt`
+in `C:\JTSDK\config\default.txt` with your choices in check and destinations.
 
 #### **Step-3 Build the Stable Branch**
 You can use any of the items in `Available Build Commands`. For this example
-we'll build The Stable Branch, Release, Install.
+we'll build the Stable Release Install target.
 ```
 # In a Windows or Git-Bash Terminal, change direcotry to the source location
 
