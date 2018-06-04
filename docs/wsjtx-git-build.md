@@ -156,8 +156,8 @@ Now we'll build a tagged release. The same could be done with
 a branch, it's up to the user which they choose to build.
 
 ```
-Open Git-Bash or Got-CMD
-For this esample, I am  using Git-Bash.
+Open Git-Bash or Git-CMD
+For this esample, I am using Git-Bash.
 
 List the tags, then Checkout WSJT-X 1.9.1
 
