@@ -205,8 +205,7 @@ simply change the DEST location in `default.txt` before building.
 
 
 ## Appendix-1
-Using Git log, we can see the hitory of various commits. For the Sourforge
-repository, the general public will only see what is pull over.
+Using Git log, we can see the hitory of various commits.
 
 ![Git-Log](images/wsjtx-git.8.PNG)
 
