@@ -102,7 +102,7 @@ Both commands should yeild the same resutls, a new checkout in: C:\JTSDK\tmp\wsj
 ```
 #### **Step-2 Update default.txt File**
 At this point, ensure you have updated both the SRCD and DEST path locations
-in `C:\JTSDK\config\default.txt` with your choices in check and destinations.
+in `C:\JTSDK\config\default.txt` with your choices in checkout and destinations locations.
 
 #### **Step-3 Build the Stable Branch**
 You can use any of the items in `Available Build Commands`. For this example
