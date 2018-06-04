@@ -144,10 +144,12 @@ Output : C:\JTSDK\tmp\wsjtx-output\qt55\1.10.0\Release\{build, install, package}
 ```
 
 ### **Build Start**
-![Build-Start](./images/wsjtx-git.1.png)
+
+![Build-Start](images/wsjtx-git.1.PNG)
 
 ### **Build Summary**
-![Build-Start](./images/wsjtx-git.2.png)
+
+![Build-Start](images/wsjtx-git.2.PNG)
 
 ## Step-4 Build a Tag or Branch
 Now we'll build a tagged release. The same could be done with
@@ -162,13 +164,17 @@ List the tags, then Checkout WSJT-X 1.9.1
 cd /c/JTSDK/tmp/wsjtx-git-sf
 git tag -l
 ```
-![Build-Start1](./images/wsjtx-git.3.png)
+
+![Build-Start1](images/wsjtx-git.3.PNG)
+
 
 ```
 # Checkout Tag wsjtx-1.9.1
 git checkout tags/wsjtx-1.9.1
 ```
-![Build-Sumarry1](./images/wsjtx-git.4.png)
+
+![Build-Sumarry1](images/wsjtx-git.4.PNG)
+
 
 ```
 # In JTSDK-QT, Build The Tag WSJT-X 1.9.1
@@ -176,16 +182,18 @@ git checkout tags/wsjtx-1.9.1
 build-wsjtx-git rinstall
 ```
 ### **Build Start Tag 1.9.1**
-![Build-Start2](./images/wsjtx-git.5.png)
+
+![Build-Start2](images/wsjtx-git.5.PNG)
 
 ### **Build Summary Tag 1.9.1**
-![Build-Summary2](./images/wsjtx-git.6.png)
+
+![Build-Summary2](images/wsjtx-git.6.PNG)
 
 ---
 ## Step-5 Change back to Stable Branch
 Now that the tag is built, switch back to the `Stable` Branch.
 
-![Stable-Branch](./images/wsjtx-git.7.png)
+![Stable-Branch](images/wsjtx-git.7.PNG)
 
 ---
 ## Sumary
@@ -200,7 +208,7 @@ simply change the DEST location in `default.txt` before building.
 Using Git log, we can see the hitory of various commits. For the Sourforge
 repository, the general public will only see what is pull over.
 
-![Git-Log](./images/wsjtx-git.8.png)
+![Git-Log](images/wsjtx-git.8.PNG)
 
 
 
