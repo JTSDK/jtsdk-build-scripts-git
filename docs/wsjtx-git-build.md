@@ -3,7 +3,7 @@ The following is a short walkthrough to build the new
 [WSJT-X Git Repository](https://sourceforge.net/p/wsjt/wsjtx/ci/stable/tree/) using `qtenv-wsjtx-build-git.cmd`.
 It does not depend on Git, nor has any interaction with Git. If the
 user wishes to build from different URL / Repository, all that is
-required is to update the `wsjtx-git.txt` file with the new checkout
+required is to update the `default.txt` file with the new checkout
 path. 
 
 ---
@@ -127,17 +127,17 @@ Git should return:
 
 Open JTSDK-QT
 - Ensure your're on QT55
-- Ensure you've built Hamlib3, then
+- Ensure you've built Hamlib3, then type:
 
-Type: build-wsjtx-git rinstall
+build-wsjtx-git rinstall
 
-Note: you can use any of the available commands:
- rinstall
- dinstall
- rconfig
- dconfig
- package
- docs
+Note: you can use any of the following commands:
+   rinstall   Builds the Release Install target
+   dinstall   Builds the Debug Instll target
+   rconfig    Configure Only Release Install target
+   dconfig    Configure Only Debug Install target
+   package    Release Install Win32 Installer Package
+   docs       Compiles the documentation
 
 The Output should be located at:
 
@@ -153,12 +153,14 @@ Output : C:\JTSDK\tmp\wsjtx-output\qt55\1.10.0\Release\{build, install, package}
 ![Build-Start](images/wsjtx-git.2.png)
 
 ## Step-4 Build a Tag or Branch
-In this example, we'll build a tagged release. The same could be done with
+Now we'll build a tagged release. The same could be done with
 a branch, it's up to the user which they choose to build.
 
 ```
 Open Git-Bash or Got-CMD
-In this example, I'm using Git-Bash. List the tags, then Checkout WSJT-X 1.9.1
+For this esample, I am  using Git-Bash.
+
+List the tags, then Checkout WSJT-X 1.9.1
 
 cd /c/JTSDK/tmp/wsjtx-git-sf
 git tag -l
@@ -191,10 +193,10 @@ Now that the tag is built, switch back to the `Stable` Branch.
 ---
 ## Sumary
 In theory, you should be able to build any branch or tag with the current build
-as long as the `wsjtx-git.txt` file is updated with the correct Source Location.
+as long as the `default.txt` file is updated with the correct Source Location.
 
 >TIP - If you want different output locations for a given Branch or Tag,
-simply change the DEST location in `wsjtx-git.txt` before building.
+simply change the DEST location in `default.txt` before building.
 
 
 ## Appendix-1
