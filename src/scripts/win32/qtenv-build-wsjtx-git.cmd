@@ -1,13 +1,13 @@
 @ECHO OFF
 REM  ---------------------------------------------------------------------------
 REM  Name .........: qtenv-build-wsjtx-git.cmd
-REM  Project ......: Part of the JTSDK 2.0 Project
-REM  Description ..: Build script for WSJTX
-REM  Project URL ..: http://sourceforge.net/projects/wsjt/
-REM  Usage ........: This file is run from within qtenv.cmd
+REM  Project ......: This script is an Annex to the JTSDK v2 Project
+REM  Description ..: Build script for WSJTX Git Repositories
+REM  Project URL ..: https://github.com/KI7MT/jtsdk-build-scripts-git
 REM
 REM  Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
-REM  Copyright ....: Copyright (C) 2014-2016 Joe Taylor, K1JT
+REM  Copyright ....: Copyright (C) 2018, Greg Beam KI7MT
+REM                  Copyright (C) 2018, Joe Taylor, K1JT
 REM  License ......: GPL-3
 REM
 REM  qtenv-build-wsjtx-git.cmd is free software: you can redistribute it and/or
@@ -23,22 +23,11 @@ REM
 REM  You should have received a copy of the GNU General Public License
 REM  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 REM ----------------------------------------------------------------------------
-
-:: -----------------------------------------------------------------------------
-:: Edit the C:\JTSDK\config\wsjtx-git.txt file to change these values
-
-:: Source Directory
-cat %cfgd%\wsjtx-git.txt |grep "SRCD" |awk "{print $2}" >s.d & SET /p srcd=<s.d & rm s.d
-
-:: Destination Root Directory
-cat %cfgd%\wsjtx-git.txt |grep "DEST" |awk "{print $2}" >d.d & SET /p dest=<d.d & rm d.d
-
-:: -----------------------------------------------------------------------------
-
-REM ----------------------------------------------------------------------------
-REM  NO EDITS REQUIRED BELOW THIS LINE
-REM ----------------------------------------------------------------------------
 CLS
+
+:: Set Source and Destination Directories
+cat %cfgd%\defailt.txt |grep "SRCD" |awk "{print $2}" >s.d & SET /p srcd=<s.d & rm s.d
+cat %cfgd%\defailt.txt |grep "DEST" |awk "{print $2}" >d.d & SET /p dest=<d.d & rm d.d
 
 :: option parameters
 SET qt55=No
