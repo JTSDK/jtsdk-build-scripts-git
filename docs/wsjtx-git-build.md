@@ -100,7 +100,7 @@ git clone https://git.code.sf.net/p/wsjt/wsjtx /c/JTSDK/tmp/wsjtx-git-sf
 Both commands should yeild the same resutls, a new checkout in: C:\JTSDK\tmp\wsjtx-git-sf
 
 ```
-#### **Step-2 Update wsjtx-git.txt File**
+#### **Step-2 Update default.txt File**
 At this point, ensure you have updated both the SRCD and DEST path locations
 in `C:\JTSDK\config\default.txt` with your choices in check and destinations.
 
