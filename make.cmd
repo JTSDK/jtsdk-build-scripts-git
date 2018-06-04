@@ -23,7 +23,7 @@
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
 
-SER LOCAL
+SETLOCAL
 IF EXIST C:\JTSDK\version.jtsdk (
     SET JTSDK_HOME=C:\JTSDK
 )
