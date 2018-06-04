@@ -70,7 +70,7 @@ Git. All repository management should be performed outside of the
 `JTSDK-QT Environment` using an appropriate Git Client.
 
 ### Checkout WSJT-X Repository
-You can use any Git Client you like. The only thing that is of concern to the
+You can use any Git Client you like. The only things that are of concern to the
 build-script is the full path including the ckeckout name, and the destination
 directory. For this build example, we'll be using the following:
 ```
