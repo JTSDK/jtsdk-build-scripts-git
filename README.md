@@ -23,8 +23,7 @@ this example, it will be using both Git-Bash and Git-CMD for Windows.
 > Note - If C:\JTSDK\src does not exist, you should create it prior to
 checking out the source code.
 ```
-# Open a non-administrator Windows Console or Git-bash Terminal, then follow
-the steps.
+# Open a non-administrator Windows Console or Git-bash Terminal, then follow the steps.
 
 # Windows Console
 cd /d C:\JTSDK\src
@@ -43,8 +42,7 @@ make install
 ## Upgrading
 To upgrade `jtsdk-build-scripts-git`, use the following:
 ```
-# Open a non-administrator Windows Console or Git-bash Termainl, then follow
-the steps.
+# Open a non-administrator Windows Console or Git-bash Termainl, then follow the steps.
 
 # Windows Console
 cd /d C:\JTSDK\src\jtsdk-build-scripts-git
