@@ -38,10 +38,8 @@ The actions are the same as within the standard SVN build script.
 
 ## Default Profiles
 Source and Destination directories are provided by the default.txt file, located
-at `C:\JTSDK\config\default.txt`
-
-The `default.txt` file contains just two lines of interest, SRCD and DEST. Only
-the paths should change, do not change the prefix.
+at `C:\JTSDK\config\default.txt` The `default.txt` file contains just two lines
+of interest, SRCD and DEST. Only the paths should change, do not change the prefix.
 
 For this example, the file contains the following:
 ```
