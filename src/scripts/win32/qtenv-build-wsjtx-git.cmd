@@ -7,7 +7,6 @@ REM  Project URL ..: https://github.com/KI7MT/jtsdk-build-scripts-git
 REM
 REM  Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
 REM  Copyright ....: Copyright (C) 2018, Greg Beam KI7MT
-REM                  Copyright (C) 2018, Joe Taylor, K1JT
 REM  License ......: GPL-3
 REM
 REM  qtenv-build-wsjtx-git.cmd is free software: you can redistribute it and/or
