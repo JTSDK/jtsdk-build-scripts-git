@@ -1,0 +1,1 @@
+DOSKEY build-wsjtx-git=pushd %cd% ^& %scr%\qtenv-build-wsjtx-git.cmd $*
