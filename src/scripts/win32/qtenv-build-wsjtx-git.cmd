@@ -26,8 +26,8 @@ REM ----------------------------------------------------------------------------
 CLS
 
 :: Set Source and Destination Directories
-cat %cfgd%\defailt.txt |grep "SRCD" |awk "{print $2}" >s.d & SET /p srcd=<s.d & rm s.d
-cat %cfgd%\defailt.txt |grep "DEST" |awk "{print $2}" >d.d & SET /p dest=<d.d & rm d.d
+cat %cfgd%\default.txt |grep "SRCD" |awk "{print $2}" >s.d & SET /p srcd=<s.d & rm s.d
+cat %cfgd%\default.txt |grep "DEST" |awk "{print $2}" >d.d & SET /p dest=<d.d & rm d.d
 
 :: option parameters
 SET qt55=No
