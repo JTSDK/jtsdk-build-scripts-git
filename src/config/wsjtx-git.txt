@@ -1,0 +1,11 @@
+# For use with qtenv-build-wsjtx-git.cmd only
+# - Only the paths needs to be changed, not the prefix
+# - Do not use spaces in the paths as the build will fail
+# - Ensure there is only one space between the prefix and path
+
+# Edit the next line to set Source Location
+SRCD C:\JTSDK\tmp\wsjtx-git-sf
+
+# Edit the next line to set Destination Directory
+DEST C:\JTSDK\tmp\wsjtx-output
+
