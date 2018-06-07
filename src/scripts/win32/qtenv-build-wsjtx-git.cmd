@@ -333,11 +333,11 @@ ECHO   Version .......^: %aver%
 ECHO   Type ..........^: %copt%
 ECHO   Target ........^: %topt%
 ECHO   Tool Chain ....^: %qtv%
+ECHO   Clean .........^: %clean-first%
+ECHO   Reconfigure ...^: %rcfg%
 ECHO   SRC ...........^: %srcd%
 ECHO   Build .........^: %buildd%
 ECHO   Install .......^: %installd%
-ECHO   Clean .........^: %clean-first%
-ECHO   Reconfigure ...^: %rcfg%
 ECHO.
 GOTO FRUN
 
@@ -372,11 +372,11 @@ ECHO   Version .....^: %aver%
 ECHO   Type ........^: %copt%
 ECHO   Target ......^: %topt%
 ECHO   Tool Chain ..^: %qtv%
+ECHO   Clean .........^: %clean-first%
+ECHO   Reconfigure ...^: %rcfg%
 ECHO   SRC .........^: %srcd%
 ECHO   Build .......^: %buildd%
 ECHO   Install .....^: %installd%
-ECHO   Clean .........^: %clean-first%
-ECHO   Reconfigure ...^: %rcfg%
 ECHO.
 ECHO   Config Only builds simply configure the build tree with
 ECHO   default options. To further configure or re-configure this build,
@@ -428,9 +428,9 @@ ECHO   Version .....^: %aver%
 ECHO   Type ........^: %copt%
 ECHO   Target ......^: %topt%
 ECHO   Tool Chain ..^: %qtv%
-ECHO   SRC .........^: srcd
 ECHO   Clean .......^: %clean-first%
 ECHO   Reconfigure .^: %rcfg%
+ECHO   SRC .........^: %srcd%
 ECHO   Build .......^: %buildd%
 ECHO   Location ....^: %pkgd%\%wsjtxpkg%
 ECHO.
@@ -448,35 +448,20 @@ ECHO --------------------------------------------
 ECHO  WSJT-X DEFAULT BUILD COMMANDS
 ECHO --------------------------------------------
 ECHO.
-ECHO  Usage .....^: build-wsjtx ^[ OPTION ^]
-ECHO  Example....^: build-wsjtx rinstall
+ECHO  Usage .....^: build-wsjtx-git ^[ OPTION ^]
+ECHO  Example....^: build-wsjtx-git rinstall
 ECHO.
 ECHO  OPTIONS:
-ECHO     rconfig    WSJTX Devel, Release, Config Only
-ECHO     dconfig    WSJTX Devel, Debug, Config Only
-ECHO     rinstall   WSJTX Devel, Release, Install
-ECHO     dinstall   WSJTX Devel, Debug, Install
-ECHO     package    WSJTX Devel, Release, Package
-ECHO     docs       WSJTX Devel, Release, User Guide
-ECHO.
-ECHO --------------------------------------------
-ECHO  WSJT-X COMMAND LINE OPTIONS
-ECHO --------------------------------------------
-ECHO.
-ECHO  Usage .....^: build-wsjtx ^[-h^] ^[-b^] ^[-n^] ^[-c^] ^[-t^]  
-ECHO  Example....^: build-wsjtx ^-b dev ^-n wsjtx ^-c release ^-t install
-ECHO.
-ECHO  OPTIONS:
-ECHO     ^-h   Displays this message
-ECHO     ^-b   ^( dev ^| gar ^)
-ECHO          dev ^= development branches ^^/branches
-ECHO          gar ^= GA and RC branches ^^/tags
-ECHO     ^-n   Branch Name^: wsjtx, wsjtx-1.6, wsjtx-1.6.0-rc1, etc
-ECHO     ^-c   Cmake Build Type^: ^( release ^| debug ^)
-ECHO     ^-t  install package docs ^| user-defined
+ECHO     rconfig    WSJTX Release, Config Only
+ECHO     dconfig    WSJTX Debug, Config Only
+ECHO     rinstall   WSJTX Release, Install
+ECHO     dinstall   WSJTX Debug, Install
+ECHO     package    WSJTX Release, Package
+ECHO     docs       WSJTX Release, User Guide
 ECHO.
 ECHO  ^* To Display this message, type .....^:  build-wsjtx ^-h
-ECHO  ^* To List available branches, type ..^:  wsjtx-list ^-a
+ECHO  ^* To List available tags, type ......^:  git tag ^-l
+ECHO  ^* To List available branches, type ..^:  git branch
 ECHO  ^* Return to Main Menu, Type .........^:  main-menu 
 ECHO.
 GOTO EOF
